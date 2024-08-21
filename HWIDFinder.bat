@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-:: Function to display animation
+
 call :animate
 goto :main
 
@@ -21,14 +21,14 @@ echo.
 exit /b
 
 :main
-:: Get the hardware ID (UUID), serial number, model, and manufacturer
+
 echo Retrieving hardware information...
 wmic csproduct get UUID
 wmic csproduct get IdentifyingNumber
 wmic csproduct get Name
 wmic csproduct get Vendor
 
-:: Pause to view results
+
 pause
 
 endlocal
